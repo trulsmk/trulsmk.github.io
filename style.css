@@ -333,13 +333,21 @@ ul li a:hover{
 .card a:hover {
     background: #00BFFF;
 }
-
+.quiz-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+}
 
                     .quiz {
-                    padding: 60px 20px;
+                    padding: 80px 20px;
                     text-align: center;
                     color: #000;
-                    background-color: #f9f9f9;
+                    background-color: rgba(255,255,255,0.95);
+                    max-width: 800px;
+                    margin: 60px auto;
+                    border-radius: 12px;
+                    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
                   }
                   .quiz h2 {
                     font-size: 2rem;
@@ -347,12 +355,10 @@ ul li a:hover{
                     margin-bottom: 10px;
                   }
                   .quiz-sub {
-                    color: #555;
+                    color: #444;
                     margin-bottom: 40px;
                   }
                   .quiz-card {
-                    max-width: 600px;
-                    margin: 0 auto;
                     background: #fff;
                     padding: 30px;
                     border-radius: 12px;
