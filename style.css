@@ -3,25 +3,16 @@
     padding: 0;
 }
 
- main {
+ body {
     margin: 0;
     padding: 0;
     background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url('Cyber.jpg') no-repeat center center fixed;
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed; /* Optional: keeps image fixed when scrolling */
     color: #fff;
-  }
- 
-  body {
-    margin: 0;
-    padding: 0;
-    background: url('Cyber.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: #fff;
-    font-family: Arial, sans-serif;
+    font-family: Arial, sand-serif;
 }
+ 
+
 
 
 .navbar{
