@@ -3,13 +3,17 @@
     padding: 0;
 }
 
-.main{
-    width: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(Cyber.jpg);
-    background-position: center;
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url('Cyber.jpg');
     background-size: cover;
-    height: 100vh;
-}
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Optional: keeps image fixed when scrolling */
+    color: #fff;
+  }
+  
 
 .navbar{
     width: 1200px;
