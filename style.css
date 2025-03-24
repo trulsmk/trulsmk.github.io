@@ -333,3 +333,86 @@ ul li a:hover{
 .card a:hover {
     background: #00BFFF;
 }
+
+
+                    .quiz {
+                    padding: 60px 20px;
+                    text-align: center;
+                    color: #000;
+                    background-color: #f9f9f9;
+                  }
+                  .quiz h2 {
+                    font-size: 2rem;
+                    color: #00BFFF;
+                    margin-bottom: 10px;
+                  }
+                  .quiz-sub {
+                    color: #555;
+                    margin-bottom: 40px;
+                  }
+                  .quiz-card {
+                    max-width: 600px;
+                    margin: 0 auto;
+                    background: #fff;
+                    padding: 30px;
+                    border-radius: 12px;
+                    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+                    text-align: left;
+                  }
+                  .quiz-header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 10px;
+                  }
+                  .quiz-header h3 {
+                    margin: 0;
+                    font-size: 1.2rem;
+                    color: #111;
+                  }
+                  .quiz-step {
+                    color: #666;
+                    font-size: 0.9rem;
+                  }
+                  .quiz-progress {
+                    height: 6px;
+                    background: #ddd;
+                    border-radius: 5px;
+                    overflow: hidden;
+                    margin: 10px 0 20px;
+                  }
+                  .quiz-bar {
+                    width: 50%;
+                    height: 100%;
+                    background-color: #2979ff;
+                  }
+                  .quiz-question {
+                    font-weight: bold;
+                    margin-bottom: 20px;
+                  }
+                  .quiz-options label {
+                    display: block;
+                    background: #f2f2f2;
+                    padding: 12px 15px;
+                    margin-bottom: 10px;
+                    border-radius: 6px;
+                    cursor: pointer;
+                    font-size: 0.95rem;
+                  }
+                  .quiz-options input[type="radio"] {
+                    margin-right: 10px;
+                  }
+                  .quiz-submit {
+                    background-color: #6495ED;
+                    color: #fff;
+                    font-weight: bold;
+                    padding: 10px 20px;
+                    border: none;
+                    border-radius: 6px;
+                    cursor: pointer;
+                    margin-top: 20px;
+                  }
+                  .quiz-submit:hover {
+                    background-color: #417de0;
+                  }
+                  </style>
