@@ -333,21 +333,17 @@ ul li a:hover{
 .card a:hover {
     background: #00BFFF;
 }
-.quiz-container {
-    display: flex;
-    justify-content: center;
-    padding-top: 60px;
-}
+
 
                     .quiz {
-                    padding: 80px 20px;
-                    text-align: center;
+                    padding: 60px 20px;
                     color: #000;
                     background-color: rgba(255,255,255,0.95);
                     max-width: 800px;
                     margin: 60px auto;
                     border-radius: 12px;
                     box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+                    text-align: center;
                   }
                   .quiz h2 {
                     font-size: 2rem;
