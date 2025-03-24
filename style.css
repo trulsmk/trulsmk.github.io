@@ -269,8 +269,9 @@ ul li a:hover{
 }
 .courses {
     padding: 60px 20px;
-    background: #f5f7fa;
+    background: linear-gradient (to bottom, rgba(0,0,0,0.3), rgba(255,255,255,0.95));
     text-align: center;
+    color:#000;
 }
 
 .courses h1 {
