@@ -75,6 +75,37 @@
       font-size: 1rem;
       color: #ddd;
     }
+
+
+    .fake-email {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 20px;
+  margin-top: 40px;
+  border-left: 4px solid #ff4d4d;
+  border-radius: 8px;
+  font-family: 'Courier New', monospace;
+  color: #fff;
+}
+
+.email-header p {
+  margin: 4px 0;
+  font-weight: bold;
+}
+
+.email-body {
+  margin-top: 10px;
+}
+
+.email-body p {
+  margin: 8px 0;
+}
+
+.email-body a {
+  color: #00BFFF;
+  text-decoration: underline;
+}
+
+
   </style>
 </head>
 <body>
@@ -114,6 +145,24 @@
     </p>
 
     <a href="index.html" class="back-link">← Back to Home</a>
+
+    <h2>Phishing Email Example</h2>
+<div class="fake-email">
+  <div class="email-header">
+    <p><strong>From:</strong> support@paypa1.com</p>
+    <p><strong>Subject:</strong> Urgent: Your account has been suspended!</p>
+  </div>
+  <div class="email-body">
+    <p>Dear Customer,</p>
+    <p>We have detected suspicious activity on your PayPal account. For your security, we have temporarily suspended your account access.</p>
+    <p>To restore access, please verify your account immediately by clicking the link below:</p>
+    <p><a href="#">Click here to verify</a></p>
+    <p>If you do not respond within 24 hours, your account will be permanently disabled.</p>
+    <p>Thank you,<br>PayPal Support</p>
+  </div>
+</div>
+
+
   </div>
 </body>
 </html>
