@@ -335,6 +335,13 @@ ul li a:hover{
 }
 
 
+.section-break {
+    text-align: center;
+    margin: 80px auto 40px;
+    color: #fff;
+}
+
+
                     .quiz {
                     padding: 60px 20px;
                     color: #000;
