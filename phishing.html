@@ -1,22 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Phishing Defense | CyberDefend</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: url('Cyber.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 80px auto;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    h1 {
+      color: #00BFFF;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: #00BFFF;
+      margin-top: 30px;
+    }
+
+    p, li {
+      color: #eee;
+      line-height: 1.6;
+    }
+
+    a.back-link {
+      display: inline-block;
+      margin-top: 30px;
+      background: #00BFFF;
+      padding: 10px 20px;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+  </style>
 </head>
 <body>
-  <div class="main phishing-page">
+  <div class="container">
     <h1>Phishing Defense</h1>
     <p>
-      Phishing is a type of cyber attack where attackers trick users into giving away sensitive information such as usernames, passwords, or financial info.
+      Phishing is a type of cyber attack where attackers trick users into giving away sensitive information such as usernames, passwords, or financial info. It’s one of the most common threats facing individuals and small businesses in Norway.
     </p>
+
     <h2>How to Recognize Phishing</h2>
     <ul>
-      <li>Emails with urgent requests</li>
-      <li>Unusual sender addresses</li>
-      <li>Suspicious links or attachments</li>
+      <li><strong>Urgency:</strong> Emails that pressure you to act quickly or face consequences.</li>
+      <li><strong>Strange sender addresses:</strong> Slight variations of trusted domains (e.g., @paypa1.com instead of @paypal.com).</li>
+      <li><strong>Suspicious links:</strong> Hyperlinks that don’t match the displayed URL or download unexpected files.</li>
+      <li><strong>Spelling and grammar:</strong> Poor language often signals a scam.</li>
+      <li><strong>Requests for sensitive info:</strong> Legitimate companies will never ask for your password via email.</li>
     </ul>
-    <a href="index.html" class="btn">← Back to Home</a>
+
+    <h2>Why This Matters</h2>
+    <p>
+      Based on my research, 15% of SME employees still lack phishing awareness. Training simulations and regular education significantly improve detection rates. Most successful attacks happen because employees don't recognize fake emails.
+    </p>
+
+    <a href="index.html" class="back-link">← Back to Home</a>
   </div>
 </body>
 </html>
