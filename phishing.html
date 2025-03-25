@@ -77,33 +77,54 @@
     }
 
 
-    .fake-email {
-  background: rgba(255, 255, 255, 0.06);
-  padding: 20px;
-  margin-top: 40px;
-  border-left: 4px solid #ff4d4d;
+    .email-card {
+  background: #f2f2f2;
+  color: #111;
   border-radius: 8px;
-  font-family: 'Courier New', monospace;
-  color: #fff;
+  margin-top: 40px;
+  padding: 0;
+  font-family: 'Courier New', Courier, monospace;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  max-width: 100%;
 }
 
-.email-header p {
-  margin: 4px 0;
+.email-header-bar {
+  display: flex;
+  gap: 8px;
+  padding: 10px 15px;
+  background: #e0e0e0;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.circle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+
+.email-meta {
+  padding: 12px 20px;
+  background: #fafafa;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.email-body-real {
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.email-body-real a {
+  color: #0074cc;
   font-weight: bold;
-}
-
-.email-body {
-  margin-top: 10px;
-}
-
-.email-body p {
-  margin: 8px 0;
-}
-
-.email-body a {
-  color: #00BFFF;
   text-decoration: underline;
 }
+
 
 
   </style>
@@ -147,20 +168,26 @@
     <a href="index.html" class="back-link">← Back to Home</a>
 
     <h2>Phishing Email Example</h2>
-<div class="fake-email">
-  <div class="email-header">
-    <p><strong>From:</strong> support@paypa1.com</p>
-    <p><strong>Subject:</strong> Urgent: Your account has been suspended!</p>
+<div class="email-card">
+  <div class="email-header-bar">
+    <div class="circle red"></div>
+    <div class="circle yellow"></div>
+    <div class="circle green"></div>
   </div>
-  <div class="email-body">
+  <div class="email-meta">
+    <p><strong>From:</strong> support@paypa1.com</p>
+    <p><strong>Subject:</strong> Urgent: Your account has been suspended</p>
+  </div>
+  <div class="email-body-real">
     <p>Dear Customer,</p>
-    <p>We have detected suspicious activity on your PayPal account. For your security, we have temporarily suspended your account access.</p>
+    <p>We have detected suspicious activity on your PayPal account. For your security, we have temporarily suspended your access.</p>
     <p>To restore access, please verify your account immediately by clicking the link below:</p>
     <p><a href="#">Click here to verify</a></p>
     <p>If you do not respond within 24 hours, your account will be permanently disabled.</p>
     <p>Thank you,<br>PayPal Support</p>
   </div>
 </div>
+
 
 
   </div>
