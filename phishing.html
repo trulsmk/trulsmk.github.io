@@ -242,7 +242,7 @@
   <div class="quiz-card">
     <div class="quiz-header">
       <h3>Phishing Awareness Quiz</h3>
-      <span class="quiz-step" id="quizStep">Question 1 of 12</span>
+      <span class="quiz-step" id="quizStep">Question 1 of 16</span>
     </div>
     <div class="quiz-progress">
       <div class="quiz-bar" id="quizProgress" style="width: 0%; height: 4px; background-color: #00BFFF;"></div>
@@ -256,8 +256,212 @@
 </section>
 
 <script>
-  
+  const questions = [
+    {
+      question: "Why is phishing considered a human issue, not just an IT problem?",
+      answers: [
+        { text: "It only affects technical staff", correct: false },
+        { text: "It targets software vulnerabilities", correct: false },
+        { text: "It tricks individuals through deception and manipulation", correct: true },
+        { text: "It can only be resolved by installing antivirus", correct: false }
+      ]
+    },
+    {
+      question: "Why are SMEs often targeted by phishing attacks?",
+      answers: [
+        { text: "They have stronger defenses than large corporations", correct: false },
+        { text: "They use outdated hardware", correct: false },
+        { text: "They are perceived as more vulnerable", correct: true },
+        { text: "They don’t use email", correct: false }
+      ]
+    },
+    {
+      question: "What emotion do phishers commonly exploit to get users to act quickly?",
+      answers: [
+        { text: "Happiness", correct: false },
+        { text: "Curiosity", correct: false },
+        { text: "Urgency and fear", correct: true },
+        { text: "Joy", correct: false }
+      ]
+    },
+    {
+      question: "What should raise suspicion in an email?",
+      answers: [
+        { text: "Friendly tone", correct: false },
+        { text: "Unexpected links or attachments", correct: true },
+        { text: "Use of your full name", correct: false },
+        { text: "Greeting you politely", correct: false }
+      ]
+    },
+    {
+      question: "What type of email is most likely to be a phishing attempt?",
+      answers: [
+        { text: "One that offers a free pizza coupon", correct: false },
+        { text: "One that demands immediate action or offers unbelievable deals", correct: true },
+        { text: "A monthly newsletter from your subscribed service", correct: false },
+        { text: "A meeting reminder from your calendar", correct: false }
+      ]
+    },
+    {
+      question: "What is the best response when you see a suspicious email?",
+      answers: [
+        { text: "Reply to it", correct: false },
+        { text: "Forward it to your colleagues", correct: false },
+        { text: "Immediately click the link to check it", correct: false },
+        { text: "Question its authenticity", correct: true }
+      ]
+    },
+    {
+      question: "What should you always do before clicking a link in an email?",
+      answers: [
+        { text: "Check your calendar", correct: false },
+        { text: "Verify the source", correct: true },
+        { text: "Reply to the sender", correct: false },
+        { text: "Ignore the message", correct: false }
+      ]
+    },
+    {
+      question: "What is multi-factor authentication (MFA) used for?",
+      answers: [
+        { text: "Sending group emails", correct: false },
+        { text: "Storing multiple passwords", correct: false },
+        { text: "Adding extra security to your logins", correct: true },
+        { text: "Sharing access with coworkers", correct: false }
+      ]
+    },
+    {
+      question: "How can you reduce the risk of phishing attacks?",
+      answers: [
+        { text: "Use the same password everywhere", correct: false },
+        { text: "Update passwords regularly", correct: true },
+        { text: "Share login details over the phone", correct: false },
+        { text: "Disable antivirus software", correct: false }
+      ]
+    },
+    {
+      question: "Why is regular cybersecurity training important?",
+      answers: [
+        { text: "To promote teamwork", correct: false },
+        { text: "To make employees memorize long passwords", correct: false },
+        { text: "To prepare staff to recognize phishing attempts", correct: true },
+        { text: "To pass annual reviews", correct: false }
+      ]
+    },
+    {
+      question: "What is the benefit of building a culture of awareness?",
+      answers: [
+        { text: "Reduced email usage", correct: false },
+        { text: "Fewer HR complaints", correct: false },
+        { text: "Lower risk of phishing attacks", correct: true },
+        { text: "Quicker coffee breaks", correct: false }
+      ]
+    },
+    {
+      question: "What is a key factor in defending against phishing attacks?",
+      answers: [
+        { text: "High-speed internet", correct: false },
+        { text: "Open communication about threats", correct: true },
+        { text: "Changing your keyboard", correct: false },
+        { text: "Using personal devices", correct: false }
+      ]
+    },
+    {
+      question: "What should employees be encouraged to do when they notice suspicious activity?",
+      answers: [
+        { text: "Ignore it", correct: false },
+        { text: "Report it without fear", correct: true },
+        { text: "Post it on social media", correct: false },
+        { text: "Wait for someone else to take action", correct: false }
+      ]
+    }
+  ];
+
+  let currentQuestion = 0;
+  let score = 0;
+  let answered = false;
+
+  const quizQuestion = document.getElementById('quizQuestion');
+  const quizForm = document.getElementById('quizForm');
+  const quizFeedback = document.getElementById('quizFeedback');
+  const quizStep = document.getElementById('quizStep');
+  const quizProgress = document.getElementById('quizProgress');
+  const submitBtn = document.getElementById('submitBtn');
+  const nextBtn = document.getElementById('nextBtn');
+
+  function loadQuestion() {
+    const q = questions[currentQuestion];
+    quizQuestion.textContent = q.question;
+    quizForm.innerHTML = '';
+    quizFeedback.textContent = '';
+    submitBtn.style.display = 'inline-block';
+    nextBtn.style.display = 'none';
+    answered = false;
+
+    quizStep.textContent = `Question ${currentQuestion + 1} of ${questions.length}`;
+    quizProgress.style.width = `${((currentQuestion + 1) / questions.length) * 100}%`;
+
+    q.answers.forEach((answer, index) => {
+      const label = document.createElement('label');
+      label.innerHTML = `<input type="radio" name="answer" value="${index}"> ${answer.text}`;
+      quizForm.appendChild(label);
+      quizForm.appendChild(document.createElement('br'));
+    });
+  }
+
+  function submitQuiz() {
+    if (answered) return;
+
+    const selected = document.querySelector('input[name="answer"]:checked');
+    if (!selected) {
+      quizFeedback.textContent = "Please select an answer before submitting.";
+      quizFeedback.style.color = "#ffcc00";
+      return;
+    }
+
+    const selectedIndex = parseInt(selected.value);
+    const isCorrect = questions[currentQuestion].answers[selectedIndex].correct;
+
+    if (isCorrect) {
+      quizFeedback.textContent = "Correct!";
+      quizFeedback.style.color = "lightgreen";
+      score++;
+    } else {
+      quizFeedback.textContent = "Incorrect. Keep learning and stay alert.";
+      quizFeedback.style.color = "#ff6666";
+    }
+
+    answered = true;
+    submitBtn.style.display = 'none';
+    nextBtn.style.display = 'inline-block';
+
+    if (currentQuestion === questions.length - 1) {
+      nextBtn.textContent = "Finish Quiz";
+    }
+  }
+
+  function nextQuestion() {
+    currentQuestion++;
+    if (currentQuestion < questions.length) {
+      loadQuestion();
+    } else {
+      showFinalResult();
+    }
+  }
+
+  function showFinalResult() {
+    quizQuestion.textContent = `Quiz Complete!`;
+    quizForm.innerHTML = '';
+    quizFeedback.innerHTML = `You scored <strong>${score} out of ${questions.length}</strong>.`;
+    quizFeedback.style.color = "#00BFFF";
+    submitBtn.style.display = 'none';
+    nextBtn.style.display = 'none';
+    quizStep.textContent = "";
+    quizProgress.style.width = "100%";
+  }
+
+  loadQuestion();
 </script>
+
 
 
 
