@@ -428,4 +428,20 @@ ul li a:hover{
                     background-color: #417de0;
                   }
               
+                  .quiz-next {
+                    background-color: #6495ED;
+                    color: #fff;
+                    font-weight: bold;
+                    padding: 10px 20px;
+                    border: none;
+                    border-radius: 6px;
+                    cursor: pointer;
+                    margin-top: 20px;
+                    font-family: Arial, sans-serif;
+                  }
+                  
+                  .quiz-next:hover {
+                    background-color: #417de0;
+                  }
+                  
                 
