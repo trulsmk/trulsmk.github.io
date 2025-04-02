@@ -30,7 +30,7 @@
 .logo{
     color: #00BFFF;
     font-size: 35px;
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     padding-left: 20px;
     float: left;
     padding-top: 10px;
@@ -60,7 +60,7 @@ ul li{
 ul li a{
     text-decoration: none;
     color: #fff;
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     font-weight: bold;
     transition: 0.4s ease-in-out;
 }
@@ -76,7 +76,7 @@ ul li a:hover{
 }
 
 .srch{
-    font-family: 'Times New Roman';
+    font-family: 'Arial, sans-serif';
     width: 200px;
     height: 40px;
     background: transparent;
@@ -127,7 +127,7 @@ ul li a:hover{
 .content .par{
     padding-left: 20px;
     padding-bottom: 25px;
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     letter-spacing: 1.2px;
     line-height: 30px;
 }
@@ -428,4 +428,4 @@ ul li a:hover{
                     background-color: #417de0;
                   }
               
-                  
+                
